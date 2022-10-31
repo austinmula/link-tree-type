@@ -1,50 +1,120 @@
-body {
-  padding: 0;
+* {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  max-width: 1440px;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
 }
 
 .wrapper {
+  min-height: 100vh;
+  max-width: 1440px;
+  /* background: #cec6c6; */
   display: flex;
-  position: relative;
   flex-direction: column;
-  align-items: center;
+  padding: 20px;
 }
 
 main {
-  width: 1052px;
-}
-
-.links {
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  gap: 1em;
+  /* background: #000; */
 }
 
-a {
-  text-decoration: none;
-  color: #181717;
-  padding: 24px 32px;
+.profile-container {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid #101828;
+}
+.profile-container #profile_img {
+  height: 88px;
+  width: 88px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-container #twitter {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  color: #101828;
+}
+
+.profile-container #slack {
+  display: none;
+}
+
+.link-container {
+  margin-top: 2em;
+}
+
+.link-container > a {
+  display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-bottom: 8px;
-  width: 100%;
+  padding: 24px 32px;
+  margin-top: 8px;
+
+  /* width: 1152px; */
+  height: 76px;
+
   background: #eaecf0;
   border: 1px solid #eaecf0;
   border-radius: 8px;
+  text-decoration: none;
+  color: #101828;
+}
+
+.socials-container {
+  display: flex;
+  gap: 2em;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #101828;
 }
 
 footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 48px 0px;
-  justify-content: space-between;
-  position: absolute;
-  width: 100%;
   height: 160px;
-  left: 0px;
-  bottom: 0;
-  /* top: 998px; */
+  margin-top: auto;
+  /* background: rgb(55, 122, 61); */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  main {
+    width: 100%;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  main {
+    width: 100%;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 1024px) {
+  main {
+    width: 100%;
+  }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1152px) {
+  main {
+    width: 1152px;
+  }
 }
