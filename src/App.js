@@ -1,4 +1,24 @@
 import "./App.css";
+const data = [
+  { id: 1, link: "https://twitter.com/", text: "Twitter" },
+  { id: 2, link: "https://training.zuri.team/", text: "Zuri Team" },
+  { id: 3, link: "https://training.zuri.team/", text: "Zuri Books" },
+  {
+    id: 4,
+    link: "https://books.zuri.team/python-for-beginners?ref_id=austinmula",
+    text: "Python Books",
+  },
+  {
+    id: 5,
+    link: "https://background.zuri.team",
+    text: "Background Check for Coders",
+  },
+  {
+    id: 6,
+    link: "https://books.zuri.team/design-rules ",
+    text: "Design Books",
+  },
+];
 
 function App() {
   return (
@@ -16,13 +36,11 @@ function App() {
           {/* </div> */}
         </div>
         <div className="link-container">
-          <a href="http://">Twitter</a>
-          <a href="http://">Twitter</a>
-          <a href="http://">Twitter</a>
-          <a href="http://">Twitter</a>
-          <a href="http://">Twitter</a>
-          <a href="http://">Twitter</a>
-          <a href="http://">Twitter</a>
+          {data.map((item) => (
+            <a href={item.link} key={item.id}>
+              {item.text}
+            </a>
+          ))}
         </div>
         <div className="socials-container">
           <img src="/slack.png" alt="slack-socials" />
