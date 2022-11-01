@@ -56,13 +56,16 @@ main {
 
 .share-container {
   top: -20px;
-  right: 15%;
+  right: 10%;
   height: 40px;
   width: 40px;
   position: absolute;
   border: 1px dashed #d0d5dd;
   border-radius: 20px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .link-container {

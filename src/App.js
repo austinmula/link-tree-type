@@ -25,7 +25,6 @@ function App() {
     <div className="wrapper">
       <main>
         <div className="profile-container">
-          {/* <div className="profile-img"> */}
           <img
             src="https://images.unsplash.com/photo-1580477667995-2b94f01c9516?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
             alt="profile-pic"
@@ -33,8 +32,10 @@ function App() {
           />
           <p id="twitter">Austin Mula</p>
           <p id="slack">Austin Mula</p>
-          {/* </div> */}
-          <div className="share-container"></div>
+
+          <div className="share-container">
+            <img src="./shareicon.png" alt="shareicon" />
+          </div>
         </div>
         <div className="link-container">
           {data.map((item) => (
@@ -44,15 +45,15 @@ function App() {
           ))}
         </div>
         <div className="socials-container">
-          <img src="/slack.png" alt="slack-socials" />
-          <img src="/github.png" alt="github-socials" />
+          <img src="./slack.png" alt="slack-socials" />
+          <img src="./github.png" alt="github-socials" />
         </div>
       </main>
       <footer>
         <div>
-          <img src="/Zuri.Internship_Logo.png" alt="zuri-logo" />
+          <img src="./Zuri.Internship_Logo.png" alt="zuri-logo" />
           <p id="footer_text">HNG Internship 9 Frontend Task</p>
-          <img src="/I4G.png" alt="I4G" />
+          <img src="./I4G.png" alt="I4G" />
         </div>
       </footer>
     </div>
