@@ -4,9 +4,9 @@ function Footer() {
   return (
     <footer>
       <div>
-        <img src="./Zuri.Internship_Logo.png" alt="zuri-logo" />
+        <img src="./assets/Zuri.Internship_Logo.png" alt="zuri-logo" />
         <p id="footer_text">HNG Internship 9 Frontend Task</p>
-        <img src="./I4G.png" alt="I4G" />
+        <img src="./assets/I4G.png" alt="I4G" />
       </div>
     </footer>
   );
