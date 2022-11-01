@@ -13,7 +13,7 @@ function MainContent({ data }) {
         <p id="slack">Austin Mula</p>
 
         <div className="share-container">
-          <img src="./link-tree-type/images/shareicon.png" alt="shareicon" />
+          <img src="./images/shareicon.png" alt="shareicon" />
         </div>
       </div>
       <div className="link-container">
@@ -25,10 +25,10 @@ function MainContent({ data }) {
       </div>
       <div className="socials-container">
         <a href="https://slack.com/">
-          <img src="./link-tree-type/images/slack.png" alt="slack-socials" />
+          <img src="./images/slack.png" alt="slack-socials" />
         </a>
         <a href="https://github.com/austinmula/">
-          <img src="./link-tree-type/images/github.png" alt="github-socials" />
+          <img src="./images/github.png" alt="github-socials" />
         </a>
       </div>
     </main>
