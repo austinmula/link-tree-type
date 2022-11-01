@@ -34,6 +34,7 @@ function App() {
           <p id="twitter">Austin Mula</p>
           <p id="slack">Austin Mula</p>
           {/* </div> */}
+          <div className="share-container"></div>
         </div>
         <div className="link-container">
           {data.map((item) => (
@@ -48,9 +49,11 @@ function App() {
         </div>
       </main>
       <footer>
-        <img src="/Vector.png" alt="I4G" />
-        <p>HNG Internship 9 Frontend Task</p>
-        <img src="/I4G.png" alt="I4G" />
+        <div>
+          <img src="/Zuri.Internship_Logo.png" alt="zuri-logo" />
+          <p id="footer_text">HNG Internship 9 Frontend Task</p>
+          <img src="/I4G.png" alt="I4G" />
+        </div>
       </footer>
     </div>
   );
