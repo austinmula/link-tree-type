@@ -13,17 +13,24 @@ import { mylinks } from "../data/mylinks";
 
 const LinkTree = () => {
   return (
-    <>
-      <VStack w="100%" spacing={7} py={8}>
+    <Box w="100%" py={8}>
+      <VStack w="100%" spacing={7}>
         {/* profile-container */}
 
-        <VStack pos="relative" w="100%">
+        <Box
+          pos="relative"
+          w="100%"
+          display={"flex"}
+          flexDir="column"
+          alignItems={"center"}
+          justifyContent={"center"}
+        >
           <Circle
             size={"40px"}
             position={"absolute"}
             border="1px dashed #d0d5dd"
             top="-20px"
-            right={40}
+            right={20}
             display={{ base: "none", md: "flex" }}
           >
             <Image
@@ -60,13 +67,14 @@ const LinkTree = () => {
             fontSize="20px"
             color={"#101828"}
             lineHeight="30px"
+            my="8px"
           >
             Austin Mula
           </Text>
           <Text id="slack" display="none">
             Austin Mula
           </Text>
-        </VStack>
+        </Box>
 
         {/* Links container */}
 
@@ -128,7 +136,7 @@ const LinkTree = () => {
           </ChakraLink>
         </Flex>
       </VStack>
-    </>
+    </Box>
   );
 };
 
