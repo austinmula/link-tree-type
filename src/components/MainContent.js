@@ -1,4 +1,6 @@
+import { Link as ChakraLink } from "@chakra-ui/react";
 import React from "react";
+import { mylinks } from "../data/mylinks";
 
 function MainContent({ data }) {
   return (
@@ -17,11 +19,11 @@ function MainContent({ data }) {
         </div>
       </div>
       <div className="link-container">
-        {data.map((item) => (
+        {/* {data.map((item) => (
           <a href={item.link} key={item.id} id={item.id}>
             {item.text}
           </a>
-        ))}
+        ))} */}
       </div>
       <div className="socials-container">
         <a href="https://slack.com/">

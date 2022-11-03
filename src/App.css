@@ -5,20 +5,20 @@
   font-family: "Inter", sans-serif;
 }
 
-body {
+/* body {
   display: flex;
   justify-content: center;
-}
+} */
 
-.wrapper {
+/* .wrapper {
   padding-top: 1em;
   min-height: 100vh;
   max-width: 1440px;
   display: flex;
   flex-direction: column;
-}
+} */
 
-main {
+/* main {
   min-width: 100%;
   padding: 20px;
   flex-grow: 1;
@@ -26,7 +26,7 @@ main {
   flex-direction: column;
   justify-content: space-evenly;
   gap: 2em;
-}
+} */
 
 .profile-container {
   display: flex;
@@ -43,14 +43,14 @@ main {
   object-fit: cover;
 }
 
-.profile-container #twitter {
+#twitter {
   font-weight: 700;
   font-size: 20px;
   line-height: 30px;
   color: #101828;
 }
 
-.profile-container #slack {
+#slack {
   display: none;
 }
 
@@ -72,7 +72,7 @@ main {
   margin-top: 1em;
 }
 
-.link-container > a {
+a {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -80,7 +80,7 @@ main {
   padding: 24px 32px;
   margin-top: 8px;
   height: 76px;
-  background: #eaecf0;
+  background-color: #eaecf0;
   border: 1px solid #eaecf0;
   border-radius: 8px;
   text-decoration: none;
@@ -96,21 +96,21 @@ main {
   height: 72px;
 }
 
-footer {
+/* footer {
   margin-top: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
+} */
 
-footer > div {
+/* footer > div {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-top: 1px solid #eaecf0;
   height: 120px;
-}
+} */
 
 #footer_text {
   font-family: "Inter";
@@ -122,7 +122,7 @@ footer > div {
 }
 
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) {
   main {
     min-width: 100%;
     padding: 5px;
@@ -144,33 +144,9 @@ footer > div {
     align-items: start;
     gap: 0.7em;
     border-top: 1px solid #eaecf0;
-  }
+  } 
 
-  footer > div > img {
+   footer > div > img {
     height: 24px;
   }
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-  main {
-    min-width: 100%;
-  }
-
-  footer > div > img {
-    height: 24px;
-  }
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 1024px) {
-  main {
-    min-width: 100%;
-  }
-}
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1152px) {
-  main {
-    width: 1152px;
-  }
-}
+} */
