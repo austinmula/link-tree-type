@@ -7,7 +7,7 @@ import LinkTree from "./pages/LinkTree";
 function App() {
   return (
     <Routes>
-      <Route path="" element={<MainLayout />}>
+      <Route path="link-tree-type" element={<MainLayout />}>
         <Route index element={<LinkTree />} />
         <Route path="contact" element={<ContactMe />} />
       </Route>
