@@ -28,33 +28,33 @@
   gap: 2em;
 } */
 
-.profile-container {
+/* .profile-container {
   display: flex;
   position: relative;
   flex-direction: column;
   align-items: center;
   gap: 12px;
-}
+} */
 
-.profile-container #profile_img {
+/* .profile-container #profile_img {
   height: 88px;
   width: 88px;
   border-radius: 50%;
   object-fit: cover;
-}
+} */
 
-#twitter {
+/* #twitter {
   font-weight: 700;
   font-size: 20px;
   line-height: 30px;
   color: #101828;
-}
+} */
 
-#slack {
+/* #slack {
   display: none;
-}
+} */
 
-.share-container {
+/* .share-container {
   top: -20px;
   right: 10%;
   height: 40px;
@@ -66,13 +66,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
+} */
 
-.link-container {
+/* .link-container {
   margin-top: 1em;
-}
+} */
 
-a {
+/* a {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -86,15 +86,15 @@ a {
   text-decoration: none;
   color: #101828;
   width: 100%;
-}
+} */
 
-.socials-container {
+/* .socials-container {
   display: flex;
   gap: 1.7em;
   align-items: center;
   justify-content: center;
   height: 72px;
-}
+} */
 
 /* footer {
   margin-top: auto;
@@ -112,14 +112,14 @@ a {
   height: 120px;
 } */
 
-#footer_text {
+/* #footer_text {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
   color: #667085;
-}
+} */
 
 /* Extra small devices (phones, 600px and down) */
 /* @media only screen and (max-width: 600px) {
