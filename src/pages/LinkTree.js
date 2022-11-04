@@ -33,11 +33,7 @@ const LinkTree = () => {
             right={20}
             display={{ base: "none", md: "flex" }}
           >
-            <Image
-              src="./link-tree-type/images/shareicon.png"
-              alt="share-desktop"
-              w="25px"
-            />
+            <Image src="./images/shareicon.png" alt="share-desktop" w="25px" />
           </Circle>
           <Circle
             size={"40px"}
@@ -47,11 +43,7 @@ const LinkTree = () => {
             right={0}
             display={{ base: "flex", md: "none" }}
           >
-            <Image
-              src="./link-tree-type/images/shareicon2.png"
-              alt="share-mobile"
-              w="25px"
-            />
+            <Image src="./images/shareicon2.png" alt="share-mobile" w="25px" />
           </Circle>
           <Image
             src="https://images.unsplash.com/photo-1580477667995-2b94f01c9516?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
@@ -123,16 +115,10 @@ const LinkTree = () => {
         {/* Socials Container */}
         <Flex gap={4}>
           <ChakraLink href="https://slack.com/" isExternal>
-            <Image
-              src="./link-tree-type/images/slack.png"
-              alt="slack-socials"
-            />
+            <Image src="./images/slack.png" alt="slack-socials" />
           </ChakraLink>
           <ChakraLink href="https://github.com/austinmula/" isExternal>
-            <Image
-              src="./link-tree-type/images/github.png"
-              alt="github-socials"
-            />
+            <Image src="./images/github.png" alt="github-socials" />
           </ChakraLink>
         </Flex>
       </VStack>

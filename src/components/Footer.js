@@ -23,17 +23,14 @@ function Footer() {
         borderTop="1px solid #eaecf0"
       >
         <Box height={["24px", "full"]}>
-          <Image
-            src="./link-tree-type/images/Zuri.Internship_Logo.png"
-            alt="zuri-logo"
-          />
+          <Image src="./images/Zuri.Internship_Logo.png" alt="zuri-logo" />
         </Box>
 
         <Box>
           <p id="footer_text">HNG Internship 9 Frontend Task</p>
         </Box>
         <Box height={["24px", "full"]}>
-          <Image src="./link-tree-type/images/I4G.png" alt="I4G" />
+          <Image src="./images/I4G.png" alt="I4G" />
         </Box>
       </Flex>
     </Box>
