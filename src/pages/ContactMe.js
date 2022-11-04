@@ -17,13 +17,14 @@ import React, { useState } from "react";
 
 const ContactMe = () => {
   const name = "Austin";
-  const [error, setError] = useState({
+  const def = {
     email: false,
     first_name: false,
     last_name: false,
     message: false,
-    terms: false,
-  });
+  };
+  const [error, setError] = useState(def);
+  const [success, setSuccess] = useState(false);
   const [data, setData] = useState({
     email: "",
     first_name: "",
@@ -33,8 +34,21 @@ const ContactMe = () => {
   });
 
   const handleSubmit = (e) => {
+    setSuccess(false);
+    setError(def);
+
+    for (const key in data) {
+      if (data[key] == "") {
+        setError((prev) => ({
+          ...prev,
+          [key]: true,
+        }));
+      }
+    }
     e.preventDefault();
-    console.log(data);
+    if (data.first_name && data.email && data.message && data.last_name) {
+      setSuccess(true);
+    }
   };
 
   const handleChange = (e) => {
@@ -83,7 +97,7 @@ const ContactMe = () => {
 
         <VStack as="form" spacing={6} w="100%" onSubmit={handleSubmit}>
           <Stack direction={["column", "row"]} w="100%" spacing={5}>
-            <FormControl>
+            <FormControl isInvalid={error.first_name}>
               <FormLabel color="#344054">First name</FormLabel>
               <Input
                 type="text"
@@ -98,11 +112,16 @@ const ContactMe = () => {
                   border: "1px solid #84CAFF",
                   boxShadow: "0px 1px 2px rgba(16, 24, 40, 0.05)",
                 }}
+                _invalid={{
+                  border: " 1px solid #F89687",
+                }}
                 onChange={handleChange}
               />
-              <FormHelperText>Please enter first name</FormHelperText>
+              {error.first_name && (
+                <FormErrorMessage>Please enter first name</FormErrorMessage>
+              )}
             </FormControl>
-            <FormControl>
+            <FormControl isInvalid={error.last_name}>
               <FormLabel color="#344054">Last name</FormLabel>
               <Input
                 type="text"
@@ -113,16 +132,21 @@ const ContactMe = () => {
                 border={"1px solid #D0D5DD"}
                 boxShadow="0px 1px 2px rgba(16, 24, 40, 0.05)"
                 borderRadius={"8px"}
+                _invalid={{
+                  border: " 1px solid #F89687",
+                }}
                 _focus={{
                   border: "1px solid #84CAFF",
                   boxShadow: "0px 1px 2px rgba(16, 24, 40, 0.05)",
                 }}
                 onChange={handleChange}
               />
-              <FormHelperText>Please enter last name</FormHelperText>
+              {error.first_name && (
+                <FormErrorMessage>Please enter last name</FormErrorMessage>
+              )}
             </FormControl>
           </Stack>
-          <FormControl>
+          <FormControl isInvalid={error.email}>
             <FormLabel color="#344054">Email</FormLabel>
             <Input
               type="email"
@@ -137,14 +161,19 @@ const ContactMe = () => {
                 border: "1px solid #84CAFF",
                 boxShadow: "0px 1px 2px rgba(16, 24, 40, 0.05)",
               }}
+              _invalid={{
+                border: " 1px solid #F89687",
+              }}
               onChange={handleChange}
             />
-            <FormHelperText>Please enter your email.</FormHelperText>
+            {/* <FormHelperText>Please enter your email.</FormHelperText> */}
+            {error.email && (
+              <FormErrorMessage>Please enter your email</FormErrorMessage>
+            )}
           </FormControl>
-          <FormControl>
+          <FormControl isInvalid={error.message}>
             <FormLabel color="#344054">Message</FormLabel>
             <Textarea
-              // isInvalid
               type="text"
               id="message"
               resize={"none"}
@@ -164,7 +193,9 @@ const ContactMe = () => {
               onChange={handleChange}
             />
             {/* <FormHelperText>Enter message here</FormHelperText> */}
-            <FormErrorMessage>Error</FormErrorMessage>
+            {error.message && (
+              <FormErrorMessage>Please enter a message</FormErrorMessage>
+            )}
           </FormControl>
           <Box w="100%">
             <Checkbox
@@ -204,6 +235,11 @@ const ContactMe = () => {
           >
             Send message
           </Button>
+          {success && (
+            <Box border="1px solid green" p={4} color="green.700">
+              Message sent successfully!
+            </Box>
+          )}
         </VStack>
       </VStack>
     </Box>
